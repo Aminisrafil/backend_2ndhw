@@ -1,0 +1,27 @@
+﻿@using lesson02_hw.Model
+@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    @if (Model.Point < 90)
+    {
+            <h1>@Model.FullName - @Model.Point - <span style="color: red">High Honoura Alabilmedi</span></h1>
+        ;
+    }
+    else
+    {
+                    <h1>@Model.FullName - @Model.Point - <span style="color:green">High Honour Ala bildi</span></h1>
+        ;
+    }
+    
+</body>
+</html>

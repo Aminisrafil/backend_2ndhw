@@ -1,0 +1,41 @@
+﻿@using lesson02_hw.ViewModels
+@model StudentGroup
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Students</h2>
+    <ul>
+        @foreach(Student item in Model.Students)
+        {
+            if (item.Point < 90)
+            {
+                        <li>@item.FullName - @item.Point - <span style="color: red">High Honoura Alabilmedi</span> </li>;
+            }
+
+            else
+            {
+                         <li>@item.FullName - @item.Point - <span style="color:green">High Honour Ala bildi</span> </li>;
+            }
+            
+            
+            
+        }
+    </ul>
+    <h2>Groups</h2>
+    <ul>
+        @foreach (Group item in Model.Groups)
+        {
+                <li>@item.Id - @item.Name</li>
+        }
+    </ul>
+</body>
+</html>
